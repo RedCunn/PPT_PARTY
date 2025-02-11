@@ -1,5 +1,6 @@
 const XLSX = require("xlsx");
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 let collection = [];
 
@@ -57,8 +58,8 @@ const resultColl = randomize(data);
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.gmail,      // Tu dirección de Gmail
-      pass: process.env.gmailappPwd // La contraseña de aplicación generada
+      user: process.env.GMAIL_ACCOUNT,      // Tu dirección de Gmail
+      pass:  process.env.GMAIL_APP_PWD // La contraseña de aplicación generada
     }
   });
 
