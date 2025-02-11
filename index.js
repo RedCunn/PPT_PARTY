@@ -49,7 +49,7 @@ const readExcelFile = (filePath) => {
 };
 
 // Ruta del archivo Excel
-const filePath = "C:\\Users\\Constanza Sanz\\Desktop\\PPT_PARTY\\PPT_SHEET.xlsx";
+const filePath = "C:\\Users\\cunns\\dev\\PPT_PARTY\\PPT_SHEET.xlsx";
 
 // Leer el archivo y asignar topics aleatorios
 const data = readExcelFile(filePath);
@@ -73,8 +73,8 @@ const sendEmail = (to, randomTopic) => {
         <p style="font-size:20px;font-style: italic;">Has sido elegida para defender ... <span style ="font-size:30px;color:red;">${randomTopic}</span></p>
       `,
         attachments: [{
-            filename: 'jigsaw.jpg', // Nombre del archivo en el correo
-            path: 'jigsaw.jpg', // Ruta a la imagen en tu sistema
+            filename: 'jj.jpg', // Nombre del archivo en el correo
+            path: 'jj.jpg', // Ruta a la imagen en tu sistema
             cid: 'imagen_unica' // Mismo cid que se utiliza en el HTML
         }]
     };
