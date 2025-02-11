@@ -57,15 +57,15 @@ const resultColl = randomize(data);
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "cunnst@gmail.com",      // Tu dirección de Gmail
-      pass: "egkz okpt rmzx mivu"       // La contraseña de aplicación generada
+      user: process.env.gmail,      // Tu dirección de Gmail
+      pass: process.env.gmailappPwd // La contraseña de aplicación generada
     }
   });
 
 // Función para enviar email
 const sendEmail = (to, randomTopic) => {
     const mailOptions = {
-        from: "cunnst@gmail.com", // Reemplaza con tu email
+        from: process.env.gmail , // Reemplaza con tu email
         to: to,
         subject: "| TOP SECRET | FIESTA POWER POINT |",
         html: `<img src="cid:imagen_unica" alt="Foto">
